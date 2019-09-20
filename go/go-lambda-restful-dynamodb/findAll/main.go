@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"net/http"
 	"os"
@@ -30,7 +31,7 @@ func findAll() (events.APIGatewayProxyResponse, error) {
 	req := svc.ScanRequest(&dynamodb.ScanInput{
 		TableName: aws.String(os.Getenv("TABLE_NAME")),
 	})
-	res, err := req.Send()
+	res, err := req.Send(context.Background())
 	if err != nil {
 		return events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
