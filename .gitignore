@@ -2,3 +2,5 @@ venv/
 venv3/
 *.mp3
 *.zip
+*.out
+coverage.html
