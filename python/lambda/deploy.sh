@@ -1,0 +1,11 @@
+aws lambda create-function \
+--function-name PayrollProcessing \
+--runtime python3.7
+--role arn:aws:iam::accountnumber:role/PayrollProcessingLambdaRole \
+--handler lambda_function.lambda_handler \
+--description "Converts Payroll CSVs to JSON and puts the results in an s3 bucket." \
+--timeout 3 \
+--memory-size 128 \
+--code S3Bucket=shoe-company-2018-ingestion-csv-demo,S3Key=lambda_function.zip \
+--tags Environment="Production",Application="Payroll" \
+--region us-west-2

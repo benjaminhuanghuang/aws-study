@@ -23,6 +23,16 @@ aws lambda create-function --function-name FindAllMovies \
 --region us-east-1
 ```
 
+- Create python lambda function using zip file
+```
+aws lambda create-function \
+--region us-east-2 \
+--function-name MyCLITestFunction \
+--role arn:aws:iam:account-id:role/role_name \
+--runtime python3.6 \
+--handler MyCLITestFunction.my_handler \
+--zip-file fileb://path/to/function/file.zip
+```
 - Create lambda function using S3
 ```
 aws lambda create-function --function-name UpdateMovie \
