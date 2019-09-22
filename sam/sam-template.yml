@@ -4,9 +4,9 @@ Resources:
   TestFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://ben-rms-bucekt-test/9f65a968b50bb3732bd3e0e141877100
+      CodeUri: s3://ben-rms-bucekt-test/b5b1132e306ce1612b26b69019f9b6fd
       Runtime: nodejs8.10
       Handler: index.handler
       Environment:
         Variables:
-          S3_BUCKET: ben-bucket
+          S3_BUCKET: ben-rms-bucekt-test

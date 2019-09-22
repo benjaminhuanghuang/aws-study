@@ -28,4 +28,8 @@ The AWS Serverless Application Model (AWS SAM) is an open-source framework that 
 
 ## Deploy
 ```
+  sam deploy \
+  --template-file ./sam-template.yml \
+  --stack-name mystack \
+  --s3-bucket ben-rms-bucekt-test
 ``` 

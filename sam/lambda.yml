@@ -13,4 +13,4 @@ Resources:
       # The location of the Lambda function code.
       Environment:
         Variables:
-          S3_BUCKET: ben-bucket
+          S3_BUCKET: ben-rms-bucekt-test
