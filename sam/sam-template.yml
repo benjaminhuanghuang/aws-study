@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  TestFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://ben-rms-bucekt-test/9f65a968b50bb3732bd3e0e141877100
+      Runtime: nodejs8.10
+      Handler: index.handler
+      Environment:
+        Variables:
+          S3_BUCKET: ben-bucket

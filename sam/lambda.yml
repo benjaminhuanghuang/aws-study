@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  TestFunction:
+    # This resource creates a Lambda function.
+    Type: AWS::Serverless::Function
+    Properties:    
+      CodeUri: ./
+      # This function uses the Nodejs v8.10 runtime.
+      Runtime: nodejs8.10     
+      # This is the Lambda function's handler.
+      Handler: index.handler
+      # The location of the Lambda function code.
+      Environment:
+        Variables:
+          S3_BUCKET: ben-bucket
