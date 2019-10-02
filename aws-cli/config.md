@@ -1,1 +1,1 @@
-aws confgure
+aws configure
